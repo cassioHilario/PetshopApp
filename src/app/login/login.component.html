@@ -1,0 +1,22 @@
+<mat-grid-list cols="2" rowHeight="10:2">
+  <mat-grid-tile [rowspan]="6" [colspan]="2">
+    <div class="logo-container">
+      <img src="icons/Logo-Leme.png" alt="Logo written Petshop APP: The App that even your pet can use" >
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [rowspan]="5" [colspan]="2" class="form-tile">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+      <mat-form-field>
+        <mat-label>Username: </mat-label>
+        <input matInput placeholder="Username" type="text" formControlName="username" aria-label="Username" [required]="true">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password: </mat-label>
+        <input matInput placeholder="Password" type="password" formControlName="password" aria-label="Password" [required]="true">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+  </mat-grid-tile>
+  <mat-grid-tile [rowspan]="1" [colspan]="1" class="button-tile button-pwd"><button mat-button color="accent">FORGOT PASSWORD</button></mat-grid-tile>
+  <mat-grid-tile [rowspan]="1" [colspan]="1" class="button-tile button-register"><button mat-button color="accent">Register</button></mat-grid-tile>
+</mat-grid-list>

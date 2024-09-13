@@ -5,11 +5,7 @@
   "projects": {
     "PetshopApp": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "less"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,15 +20,19 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "less",
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/icons/",
+                "output": "/icons"
               }
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -88,7 +88,6 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "less",
             "assets": [
               {
                 "glob": "**/*",
@@ -96,7 +95,7 @@
               }
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -105,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "48e31676-a0d9-4e22-b339-417877e332a1"
+    "analytics": "d5f12dfc-8b19-446d-b7ca-b1f018116db4"
   }
 }

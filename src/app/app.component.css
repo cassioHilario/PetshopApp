@@ -1,0 +1,76 @@
+.desktop-menu {
+  display: flex;
+}
+
+
+/* Ensure sidenav container and sidenav take full height */
+.sidenav-container {
+  height: 100vh; /* Full viewport height */
+}
+
+.mat-sidenav {
+  width: 250px;
+  height: 100%; /* Ensure sidenav takes full height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it overlays content */
+}
+
+/* Remove any margin or padding from content inside sidenav */
+.mat-sidenav-content {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensure content takes full height as well */
+  overflow: hidden;
+}
+
+/* Add padding between menu items */
+.mat-list-item {
+  margin-bottom: 16px;
+}
+
+/* Mobile toolbar adjustments */
+.mobile-toolbar {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-toolbar {
+    display: flex;
+  }
+
+  .mat-sidenav {
+    width: 70vw; /* 90% of the screen width for mobile */
+    height: 100vh; /* Full height for mobile menu */
+    background-color: white; /* Ensure background covers the entire side */
+  }
+
+  .mat-sidenav-content {
+    margin: 0;
+  }
+
+  .sidenav-container {
+    height: 100%; /* Ensure full height container for mobile */
+  }
+}
+
+
+/* For all screens */
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  padding: 16px;
+}
+
+.icon-button{
+  margin-right: 8px;
+}
